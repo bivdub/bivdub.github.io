@@ -1,4 +1,5 @@
 define(function(require, exports, module) {
+  var View    = require('famous/core/View');
   var Engine  = require('famous/core/Engine');
   var AppView = require('views/Appview')
 
