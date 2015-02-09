@@ -1,0 +1,20 @@
+
+
+#project {
+  background: red;
+}
+
+.home:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.wedge0:hover h1, .wedge1:hover h1, .wedge2:hover h1 , .wedge3:hover h1 {
+  text-decoration: underline;
+  cursor: pointer;
+  background: rgba(255,255,255,.6);
+  color: #404040;
+  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
