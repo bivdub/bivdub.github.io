@@ -8,7 +8,7 @@ define(function(require, exports, module) {
     var Easing = require('famous/transitions/Easing');
     var Engine = require('famous/core/Engine');
 
-    var mainContext = Engine.createContext();
+    // var mainContext = Engine.createContext();
 
     var PageView = require('views/PageView');
     var BlogView = require('views/BlogView');
@@ -22,7 +22,6 @@ define(function(require, exports, module) {
         View.apply(this, arguments);
 
         _createLogo.call(this);
-        // _createProject.call(this);
         _createPage.call(this);
 
         _setEmitter.call(this);
@@ -30,7 +29,6 @@ define(function(require, exports, module) {
 
     }
 
-    // AppView.setPerspective(900);
     AppView.prototype = Object.create(View.prototype);
     AppView.prototype.constructor = AppView;
 
@@ -42,13 +40,9 @@ define(function(require, exports, module) {
             content: 'img/profilePhoto.jpg',
             classes: ['double-sided']
         });
-        // var initialTime = Date.now();
         this.logoModifier = new StateModifier({
             origin: [0.5,0.5],
-            align: [0.5,0.5],
-            // transform: function() {
-            //     return Transform.rotateY(.002 * (Date.now() - initialTime));
-            // }
+            align: [0.5,0.5]
         });
         this.add(this.logoModifier).add(this.logo);
     }
@@ -72,7 +66,6 @@ define(function(require, exports, module) {
     function _setListeners() {
         this.on('ping', this.fallDown.bind(this));
         this.on('ping', this.pageDown.bind(this));
-        // this.pageView.on('project', this.projectToggle.bind(this));
     }
 
     AppView.prototype.fallDown = function() {
